@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 15 22:35:17 2022
-
-@author: LENOVO
-"""
-
 import math
 from nltk import sent_tokenize, word_tokenize, PorterStemmer
 from nltk.corpus import stopwords 
@@ -18,15 +11,13 @@ from tkinter import messagebox
 import ssl 
 from smtplib import SMTP
 
-with open("C:/Users/LENOVO/Desktop/TEZ/Veri Ön İşleme/Abstracts/z_Anadolu Kliniği Tıp Bilimleri Dergisi/10.21673-anadoluklin.1019180-2063898.txt", 'r',encoding="utf-8") as text2:
+with open("original_abstract.txt", 'r',encoding="utf-8") as text2:
     abstract=text2.read()
-with open("C:/Users/LENOVO/Desktop/TEZ/Veri Ön İşleme/İşlenecek Kısım/z_Anadolu Kliniği Tıp Bilimleri Dergisi/10.21673-anadoluklin.1019180-2063898.txt", 'r',encoding="utf-8") as text:
-    islenecek=text.read()
-    text=islenecek
+with open("text.txt", 'r',encoding="utf-8") as text:
+    text=text.read()
     
-#önişlem aşaması        
-#boşukların, parantezlerin silinmesi    
-
+    
+#preprocessing       
 
 abstract=abstract.lower()
 abstract = re.sub(r'\([^()]*\d+[^()]*\)', '', abstract)
@@ -243,42 +234,7 @@ print(summary)
 print(len(abstract))
 print(ROUGE.get_scores(summary, abstract))
 
-'''
-from openpyxl import load_workbook
-wb = load_workbook('C:/Users/LENOVO/Desktop/TEZ/Veri Ön İşleme/Sonuçlar/IDF.xlsx')
-ws = wb['Sayfa1']
-yayın1 = "anadoluklinik"
-yayın2 = "10.21673-anadoluklin.1019180-2063898"
-
-recall = 0.65
-precision = 0.24
-
-ws.cell(row=48,column=3).value = yayın1
-ws.cell(row=48,column=4).value = yayın2
-ws.cell(row=48,column=5).value = gercekmetinuzunlugu
-ws.cell(row=48,column=6).value = özetuzunlugu
-ws.cell(row=48,column=8).value = orjinalozet
-ws.cell(row=48,column=9).value = recall
-ws.cell(row=48,column=10).value = precision
 
 
-wb.save('C:/Users/LENOVO/Desktop/TEZ/Veri Ön İşleme/Sonuçlar/IDF.xlsx')
 
 
-'''
-
-'''
-ozet = summary
-with open("C:/Users/LENOVO/Desktop/TEZ/Veri Ön İşleme/Çalışmanın Özetleri/TF-IDF/z_Anadolu Kliniği Tıp Bilimleri Dergisi/10.21673-anadoluklin.1019180-2063898.txt", "w",encoding="utf-8") as file:
-    file.write(ozet)
-'''
-
-'''
-# Referans ve hipotez özetlerin BLEU skorunu hesapla
-bleu_score = nltk.translate.bleu_score.sentence_bleu([summary], abstract)
-
-# Skoru ekrana bas
-print("BLEU Skoru:", bleu_score)
-
-
-'''
