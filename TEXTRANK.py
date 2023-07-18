@@ -16,13 +16,12 @@ import re
 import nltk
 
 
-with open("C:/Users/LENOVO/Desktop/TEZ/Veri Ön İşleme/Abstracts/z_Uludağ Üniversitesi Tıp Fakültesi Dergisi/979546-1911832.txt", 'r', encoding="utf-8") as text2:
+with open("original_abstract.txt", 'r', encoding="utf-8") as text2:
     abstract = text2.read()
-with open("C:/Users/LENOVO/Desktop/TEZ/Veri Ön İşleme/İşlenecek Kısım/z_Uludağ Üniversitesi Tıp Fakültesi Dergisi/979546-1911832.txt", 'r', encoding="utf-8") as text:
-    islenecek = text.read()
-    text = islenecek
-    
-    
+with open("text.txt", 'r', encoding="utf-8") as text:
+    text = text.read()
+      
+ #Preprocessing   
 abstract=abstract.lower()
 abstract = re.sub(r'\([^()]*\d+[^()]*\)', '', abstract)
 abstract = re.sub(r'\[[^\[\]]*\d+[^\[\]]*\]', '', abstract)
@@ -57,7 +56,7 @@ def text_summarizer(text, ratio=0.4):
         summarize_text.append(i)
     return " ".join(summarize_text[:int(len(summarize_text) * ratio)])
 
-#TextRank" algoritmasını 
+#TextRank
 print(text_summarizer(text))
 summary=text_summarizer(text)
 from rouge import Rouge
@@ -74,47 +73,8 @@ gercekmetinuzunlugu=len(text)
 orjinalozet=len(abstract)
 
 
-'''
-# Rouge hesaplama
-rouge = Rouge()
-scores = rouge.get_scores(abstract, summary)
-# ROUGE-1, ROUGE-2 ve ROUGE-L skorlarına erişim
-rouge_1_score = scores[0]['rouge-1']['f']
-rouge_2_score = scores[0]['rouge-2']['f']
-rouge_l_score = scores[0]['rouge-l']['f']
-
-
-# Sonuçları yazdırma
-print("ROUGE-1 Score:", rouge_1_score)
-print("ROUGE-2 Score:", rouge_2_score)
-print("ROUGE-L Score:", rouge_l_score)
-
-'''
-
-'''
-from openpyxl import load_workbook
-wb = load_workbook('C:/Users/LENOVO/Desktop/ASYU IEEE/Veri Ön İşleme/ÇALIŞMA ÖZETLERİ/sonuçlar/TEXTRANK.xlsx')
-ws = wb['Sayfa1']
-yayın1 = "Sdü Sağlık Bilimleri Dergis "
-yayın2 = "Parkinson Hastalığı Patogenezinde Esansiyel Yağ Asitleri ve Kolesterolün Etkileri"
-
-recall = 0.
-precision = 0.
-
-ws.cell(row=5,column=3).value = yayın1
-ws.cell(row=5,column=4).value = yayın2
-ws.cell(row=5,column=5).value = gercekmetinuzunlugu
-ws.cell(row=5,column=6).value = özetuzunlugu
-ws.cell(row=5,column=8).value = orjinalozet
-ws.cell(row=5,column=9).value = recall
-ws.cell(row=5,column=10).value = precision
-
-wb.save('C:/Users/LENOVO/Desktop/ASYU IEEE/Veri Ön İşleme/ÇALIŞMA ÖZETLERİ/sonuçlar/TEXTRANK.xlsx')
-'''
-
-'''
+#save your summary
 ozet = summary
-with open("C:/Users/LENOVO/Desktop/ASYU IEEE/Veri Ön İşleme/ÇALIŞMA ÖZETLERİ/KAYDEDİLEN ÖZETLER/TEXTRANK/SDÜ/Beyin/10.22312-sdusbed.626176-991185.txt", "w",encoding="utf-8") as file:
+with open("target_path.txt", "w",encoding="utf-8") as file:
     file.write(ozet)
 
-'''
