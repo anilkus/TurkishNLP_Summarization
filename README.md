@@ -14,3 +14,19 @@ Abstractive Summarization: In contrast to extractive summarization, abstractive 
 Turkish NLP researchers have been exploring these approaches and adapting them to the Turkish language. They face unique challenges due to Turkish's specific linguistic features, such as agglutination and rich morphology. As a result, some studies may focus on adapting existing summarization models for Turkish, while others might propose novel approaches tailored to the language's characteristics.
 
 The ultimate goal of these studies is to develop effective and accurate text summarization systems that can automatically generate coherent and informative summaries, enabling users to quickly grasp the content of large volumes of text without having to read the entire document. This has various applications in areas like information retrieval, document summarization, and content curation, making it an essential component of Turkish NLP research.
+
+----------------------------------------------------------------
+Türkçe NLP çalışmaları, Türkçe dilinde yapılan Doğal Dil İşleme (DDİ) alanındaki araştırmaları ve uygulamaları kapsar. Türkçe NLP, metinleri anlama, analiz etme ve özetleme gibi görevler üzerinde çalışır.
+
+Özellikle metin özetleme, Türkçe NLP çalışmalarında önemli bir odak noktasıdır. Metin özetleme, uzun bir metinden ana noktaları ve temel bilgileri yakalayarak kısa ve tutarlı bir özet oluşturma amacını taşır.
+
+Türkçe NLP bağlamında, araştırmacılar ve geliştiriciler, metin özetleme zorluklarına çeşitli teknikler ve yöntemlerle çözüm ararlar. Bu yöntemler genellikle iki ana kategori altında incelenir:
+
+Çıkarsıma Dayalı Özetleme: Bu yöntem, orijinal metinden en önemli cümleleri veya ifadeleri seçip çıkararak özet oluşturmayı içerir. Seçilen içerik, cümle önemine, ilgili olma durumuna ve tutarlılık gibi kriterlere göre belirlenir. Çıkarsama temelli özetleme yöntemleri genellikle TextRank veya PageRank gibi algoritmaları kullanır ve metindeki önemli cümleleri tanımlamak için graf tabanlı sıralama kavramını adapte eder.
+
+Yorumlamaya Dayalı Özetleme: Çıkarsama temelli özetlemeyle karşılaştırıldığında, özdeştirici özetleme, orijinal metindeki kelimeleri veya ifadeleri tam olarak kullanmaya gerek kalmadan ana fikirleri insan benzeri bir şekilde yakalamayı amaçlar. Özdeştirici yöntemler, genellikle Tekrarlayan Sinir Ağları (RNN), Uzun Kısa Süreli Bellek (LSTM) ağları veya GPT (Önceden Eğitilmiş Çevrimdışı Dönüştürücü) gibi Transformer tabanlı modeller gibi derin öğrenme modellerini kullanarak doğal dil oluşturma tekniklerini uygular.
+
+Türkçe NLP araştırmacıları, bu yöntemleri Türkçe'ye uyarlama ve dilin özelliklerine göre özelleştirme konusunda çeşitli zorluklarla karşılaşırlar. Türkçe'nin yapısında bulunan eklemeli yapı ve zengin morfoloji gibi özellikler nedeniyle bazı çalışmalar, Türkçe için mevcut özetleme modellerini adapte etmeye odaklanırken, diğerleri dilin özelliklerine uygun yeni yöntemler önermeyi hedefler.
+
+Bu çalışmaların temel amacı, etkili ve doğru metin özetleme sistemleri geliştirmektir. Bu sistemler, kullanıcıların uzun metinlerin tamamını okumadan içeriği hızlı bir şekilde kavramasını sağlayacak kısa ve öz özetler oluşturabilmelidir. Bu özetleme yöntemlerinin bilgi çıkarma, metin özetleme ve içerik düzenleme gibi çeşitli alanlarda uygulamaları bulunur ve bu nedenle Türkçe NLP araştırmaları için önemli bir bileşeni oluşturur.
+
