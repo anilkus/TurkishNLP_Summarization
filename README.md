@@ -15,6 +15,10 @@ Turkish NLP researchers have been exploring these approaches and adapting them t
 
 The ultimate goal of these studies is to develop effective and accurate text summarization systems that can automatically generate coherent and informative summaries, enabling users to quickly grasp the content of large volumes of text without having to read the entire document. This has various applications in areas like information retrieval, document summarization, and content curation, making it an essential component of Turkish NLP research.
 
+<b>In this study, four different extractive methods have been utilized. You can examine the applications of TF-idf, LSA, LDA, and Textrank algorithms in Python files. Please feel free to ask any questions you may have.</b>
+
+Contact : <a href="https://www.linkedin.com/in/anil-kus/">Linkedin</a>
+
 ----------------------------------------------------------------
 Türkçe NLP çalışmaları, Türkçe dilinde yapılan Doğal Dil İşleme (DDİ) alanındaki araştırmaları ve uygulamaları kapsar. Türkçe NLP, metinleri anlama, analiz etme ve özetleme gibi görevler üzerinde çalışır.
 
@@ -30,3 +34,6 @@ Türkçe NLP araştırmacıları, bu yöntemleri Türkçe'ye uyarlama ve dilin �
 
 Bu çalışmaların temel amacı, etkili ve doğru metin özetleme sistemleri geliştirmektir. Bu sistemler, kullanıcıların uzun metinlerin tamamını okumadan içeriği hızlı bir şekilde kavramasını sağlayacak kısa ve öz özetler oluşturabilmelidir. Bu özetleme yöntemlerinin bilgi çıkarma, metin özetleme ve içerik düzenleme gibi çeşitli alanlarda uygulamaları bulunur ve bu nedenle Türkçe NLP araştırmaları için önemli bir bileşeni oluşturur.
 
+<b>Bu çalışmada , 4 farklı extractive method kullanılmıştır. TF-idf, LSA,LDA xe textrank algoritmalarının uygulamalarını python dosyalarında inceleyebilirsiniz, sorunuz için lütfen tereddüt etmeyin.</b>
+
+İletişim : <a href="https://www.linkedin.com/in/anil-kus/">Linkedin</a>
